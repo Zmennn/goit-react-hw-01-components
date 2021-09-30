@@ -3,32 +3,35 @@ import './App.css';
 import data from './social-profile/user.json';
 import UserCard from './social-profile/components/user-card';
 import statData from './statistics-section/statistical-data.json';
-import StatisticElement from './statistics-section/components/statistics';
+import StatisticList from './statistics-section/components/statistics-list';
+import FriendList from './friend-list/components/friend-list';
+import friendData from './friend-list/friends.json';
+import transactionData from './transaction-history/transactions.json';
+import TransactionHistory from './transaction-history/components/transaction-history';
 
 function App() {
-
-  return <> <div>
-    <UserCard
-      name={data.name}
-      tag={data.tag}
-      location={data.location}
-      avatar={data.avatar}
-      stats={data.stats} />
-  </div>
+  return <>
     <div>
-      <section className="statistics">
-        <h2 className="title">Upload stats</h2>
-        <ul className="stat-list">
-          {statData.map((el) =>
-            <li key={el.id}>
-              <StatisticElement
-                label={el.label}
-                percentage={el.percentage}
-              />
-            </li>
-          )}
-        </ul>
-      </section>
+      <UserCard
+        name={data.name}
+        tag={data.tag}
+        location={data.location}
+        avatar={data.avatar}
+        stats={data.stats} />
+    </div>
+    <div>
+      <StatisticList
+        statData={statData} />
+    </div>
+    <div>
+      <FriendList
+        friends={friendData}
+      />
+    </div>
+    <div>
+      <TransactionHistory
+        items={transactionData}
+      />
     </div>
   </>
 }
