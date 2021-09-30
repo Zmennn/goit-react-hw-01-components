@@ -1,17 +1,14 @@
 import PropTypes from 'prop-types';
-
-export default function StatisticElement(label, percentage) {
-
-    // <li className="item" key={id}>
+export default function StatisticElement({ label, percentage }) {
 
     return (<>
         <span className="label">{label}</span>
         <span className="percentage">{percentage}</span>
     </>)
 };
-// </li >
-// StatisticElement.propTypes = {
-//     label: PropTypes.string.isRequired,
-//     percentage: PropTypes.number.isRequired
-// }
+
+StatisticElement.propTypes = {
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired
+}
 

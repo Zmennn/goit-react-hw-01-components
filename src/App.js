@@ -19,17 +19,14 @@ function App() {
       <section className="statistics">
         <h2 className="title">Upload stats</h2>
         <ul className="stat-list">
-
           {statData.map((el) =>
             <li key={el.id}>
               <StatisticElement
-                // id={el.id}
                 label={el.label}
                 percentage={el.percentage}
               />
             </li>
-          )
-          };
+          )}
         </ul>
       </section>
     </div>
