@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 export default function UserCard({ name, tag, location, avatar, stats }) {
 
@@ -31,6 +32,12 @@ export default function UserCard({ name, tag, location, avatar, stats }) {
 
 }
 
-
+UserCard.propTypes = {
+    name: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    stats: PropTypes.objectOf(PropTypes.number).isRequired,
+}
 
 
