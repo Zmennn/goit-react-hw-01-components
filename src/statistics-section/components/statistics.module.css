@@ -1,0 +1,30 @@
+.statistics {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.statList {
+  width: 500px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, max(100px));
+}
+
+.title {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background: rgb(173, 220, 224);
+  text-align: center;
+  outline: solid 1px black;
+}
+
+.label,
+.percentage {
+  display: block;
+  text-align: center;
+}
+
+.percentage {
+  font-size: 25px;
+  outline: black 1px dashed;
+}

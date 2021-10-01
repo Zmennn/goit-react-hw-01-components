@@ -11,7 +11,7 @@ import TransactionHistory from './transaction-history/components/transaction-his
 
 function App() {
   return <>
-    <div>
+    <div className="mainCont">
       <UserCard
         name={data.name}
         tag={data.tag}
@@ -19,16 +19,16 @@ function App() {
         avatar={data.avatar}
         stats={data.stats} />
     </div>
-    <div>
+    <div className="mainCont">
       <StatisticList
         statData={statData} />
     </div>
-    <div>
+    <div className="mainCont">
       <FriendList
         friends={friendData}
       />
     </div>
-    <div>
+    <div className="mainCont">
       <TransactionHistory
         items={transactionData}
       />

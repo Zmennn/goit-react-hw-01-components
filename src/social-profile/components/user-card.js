@@ -1,31 +1,33 @@
 import PropTypes from 'prop-types';
+import style from './user.module.css';
+
 
 export default function UserCard({ name, tag, location, avatar, stats }) {
 
-    return <div className="profile">
-        <div className="description">
+    return <div className={style.profile}>
+        <div className={style.description}>
             <img
                 src={avatar}
                 alt="Аватар пользователя"
-                className="avatar"
+                className={style.avatar}
             />
-            <p className="name">{name}</p>
-            <p className="tag">{tag}</p>
-            <p className="location">{location}</p>
+            <p className={style.name}>{name}</p>
+            <p className={style.tag}>{tag}</p>
+            <p className={style.location}>{location}</p>
         </div>
 
-        <ul className="stats">
-            <li>
-                <span className="label">Followers</span>
-                <span className="quantity">{stats.followers}</span>
+        <ul className={style.stats}>
+            <li className={style.element}>
+                <span className={style.label}>Followers</span>
+                <span className={style.quantity}>{stats.followers}</span>
             </li>
-            <li>
-                <span className="label">Views</span>
-                <span className="quantity">{stats.views}</span>
+            <li className={style.element}>
+                <span className={style.label}>Views</span>
+                <span className={style.quantity}>{stats.views}</span>
             </li>
-            <li>
-                <span className="label">Likes</span>
-                <span className="quantity">{stats.likes}</span>
+            <li className={style.element}>
+                <span className={style.label}>Likes</span>
+                <span className={style.quantity}>{stats.likes}</span>
             </li>
         </ul>
     </div>

@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import style from './statistics.module.css'
 
 export default function StatisticElement({ label, percentage }) {
     return (<>
-        <span className="label">{label}</span>
-        <span className="percentage">{percentage}</span>
+        <span className={style.label}>{label}</span>
+        <span className={style.percentage}>{percentage}</span>
     </>)
 };
 
