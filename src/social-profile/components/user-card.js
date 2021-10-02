@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import style from './user.module.css';
 
 
-export default function UserCard({ name, tag, location, avatar, stats }) {
+export default function UserCard({ name = "No name", tag = "No data", location = "No data", avatar, stats }) {
 
     return <div className={style.profile}>
         <div className={style.description}>

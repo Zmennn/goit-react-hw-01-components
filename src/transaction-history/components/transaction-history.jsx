@@ -6,15 +6,15 @@ export default function TransactionHistory({ items }) {
       <table className={style.transactionHistory}>
   <thead>
     <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
+      <th className={style.tableTitle}>Type</th>
+      <th className={style.tableTitle}>Amount</th>
+      <th className={style.tableTitle}>Currency</th>
     </tr>
-  </thead>
+  </thead> 
 
   <tbody>
             {items.map((el) =>
-    <tr key={el.id}>
+    <tr className={style.tableRow} key={el.id}>
         <td>{el.type}</td>
         <td>{el.amount}</td>
         <td>{el.currency}</td>
@@ -25,6 +25,13 @@ export default function TransactionHistory({ items }) {
 }
 
 TransactionHistory.propTypes = {
-    items: PropTypes.array.isRequired
+  items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    type:PropTypes.string.isRequired,
+    amount:PropTypes.string.isRequired,
+    currency:PropTypes.string.isRequired
+  })).isRequired
 }
+
+
 
