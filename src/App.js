@@ -1,13 +1,13 @@
 
 import './App.css';
 import data from './data/user.json';
-import UserCard from './social-profile/components/UserCard';
+import UserCard from './components/UserCard';
 import statData from './data/statistical-data.json';
-import StatisticList from './statistics-section/components/statistics-list';
-import FriendList from './friend-list/components/FriendList';
+import StatisticList from './components/StatisticsList.jsx';
+import FriendList from './components/FriendList';
 import friendData from './data/friends.json';
 import transactionData from './data/transactions.json';
-import TransactionHistory from './transaction-history/components/transaction-history';
+import TransactionHistory from './components/TransactionHistory';
 
 function App() {
   return <>

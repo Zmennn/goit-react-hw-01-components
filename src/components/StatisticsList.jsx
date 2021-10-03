@@ -3,9 +3,8 @@ import style from './statistics.module.css';
 
 
 export default function StatisticList({ statData }) {
-
     return <>
-        (<section className={style.statistics}>
+        <section className={style.statistics}>
             <h2 className={style.title}>Upload stats</h2>
             <ul className={style.statList} >
                 {statData.map((el) =>
@@ -14,11 +13,11 @@ export default function StatisticList({ statData }) {
                         outline: "solid 1px black"
                     }}>
                         <span className={style.label}>{el.label}</span>
-                        <span className={style.percentage}>{el.percentage}</span>
+                        <span className={style.percentage}>{el.percentage?el.percentage:"No data"}</span>
                     </li>
                 )}
             </ul>
-        </section >)</>
+        </section ></>
 }
 
 StatisticList.propTypes = {
